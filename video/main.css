@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#videos{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    overflow:hidden;
+}
+
+.video-player{
+    background-color: black;
+    left: 600px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+#user-2{
+    display: none;
+}
+
+.smallFrame{
+    position: fixed;
+    background-color: black;
+    height: 400px;
+    width: 600px;
+
+
+}
+
+
+#controls{
+    position: fixed;
+    bottom: 20px;
+    left: 1100px;
+    top: 20px;
+    
+    
+}
+
+
+.control-container{
+  background-color: rgb(179, 102, 249, .9);
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-container img{
+    height: 30px;
+    width: 30px;
+}
+
+#leave-btn{
+    background-color: rgb(255,80,80, 1);
+}
+
+@media screen and (max-width:600px) {
+        .smallFrame{
+            height: 80px;
+            width: 120px;
+        }
+
+        .control-container img{
+            height: 20px;
+            width: 20px;
+        }
+}
+
+#Canvas{
+    position: absolute;
+
+}
+
+#canvasdiv{
+    position: absolute;
+    top :430px;
+    width: 600px;
+    height: 400px;
+    background-color: black;
+}
+
+.dratabe3{
+    width: 100px;
+    height: 30px;
+    font-size: 20;
+    text-align:center;
+    border : 5px solid rgb(250, 250, 250);
+    background-color: rgb(250, 0, 0);
+}
+#buttonhub{
+    display: grid;
+    position: fixed;
+    top :400px;
+    left:600px;
+    width: 100px;
+    height: 400px;
+
+}
+
+.color{
+    width: 100px;
+    height: 30px;
+}
+
+#紅{
+    background-color: rgb(255, 0, 0);
+}
+#黃{
+    background-color: rgb(255, 255, 0);
+}
+#綠{
+    background-color: rgb(0, 255, 0);
+}
+#粉{
+    background-color: rgb(245, 151, 151);
+}
+
+
+#storehub{
+    display: grid;
+    position: fixed;
+    top :400px;
+    left: 700px;
+}

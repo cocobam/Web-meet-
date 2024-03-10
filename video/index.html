@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PeerChat</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+
+ <!--視訊畫面-->
+    <div id="videos">
+        <video class="video-player" id="user-1"  autoplay playsinline></video>
+        <video class="video-player" id="user-2"  autoplay playsinline></video>
+    </div>
+ <!--按鈕-->
+    <div id="controls">
+
+        <div class="control-container" id="camera-btn">
+            <img src="icons/camera.png" />
+        </div>
+
+        <div class="control-container" id="mic-btn">
+            <img src="icons/mic.png" />
+        </div>
+
+        <a href="lobby.html">
+            <div class="control-container" id="leave-btn">
+                <img src="icons/phone.png" />
+            </div>
+        </a>
+    </div>
+ <!--畫布-->
+    <div id="canvasdiv">
+        <canvas id="Canvas" width="600" height="400" ></canvas> 
+    </div>
+    <div id="buttonhub">
+        <a id="dratabe3"></a>
+        <input id="R" class="color" type="range" min="0"max="255" value= "255" oninput="change()" onchange="change()"/>
+        <input id="G" class="color" type="range" min="0"max="255" value= "0" oninput="change()" onchange="change()"/>
+        <input id="B" class="color" type="range" min="0"max="255" value= "0" oninput="change()" onchange="change()"/>
+        <button class="color" id="drawImage" class="drawImage" onclick="reset()">清除</button>
+        <a id="dratabe">筆畫粗細</a>    
+        <input class="color" id="width" type="range" value= "10" min="1"max="30"/>
+        <a id="mods" >模式: 筆畫</a>
+        <button id="dra" class="color" onclick="return casee('0')">筆畫模式</button>
+        <button id="box" class="color" onclick="return casee('1'),colorpp('R')" >框選模式</button>
+        <button id="ring" class="color" onclick="return casee('2'),colorpp('Y')">圈選模式</button>
+        <a id="colorBR" >圈 框顏色</a>
+        <button id="紅" class="color" onclick="return colorpp('R')"></button>
+        <button id="黃" class="color" onclick="return colorpp('Y')"></button>
+        <button id="綠" class="color" onclick="return colorpp('G')"></button>
+        <button id="粉" class="color" onclick="return colorpp('P')"></button>
+
+    </div>
+    <div id="storehub">
+        <input type="text" lass="color" id="testInput" />
+        <button id="banana" lass="color" onclick="screenshot()">下載</button>
+        <button id="upload" onclick="upload()">上傳</button>
+    </div>
+
+</body>
+
+
+<script  src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src='artwork.js'></script>
+<script src='agora-rtm-sdk-1.4.4.js'></script>
+<script src='main.js'></script>
+</html>
+

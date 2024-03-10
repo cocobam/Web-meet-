@@ -1,0 +1,17 @@
+1.下載xampp
+
+2.在mysql中建立 test_db 資料庫
+
+3.資料庫內容 : images -> 變數 id (int) image_url(TEXT) int最後面欄位打勾
+
+4.開啟ngrok.exe
+
+5.登入官網https://dashboard.ngrok.com/get-started/setup
+
+6.取得token後放到 ngrok.exe上執行
+
+7.ngrok http 80
+
+8.把網址改進 artwork.js最底下的網址
+
+9.完成
